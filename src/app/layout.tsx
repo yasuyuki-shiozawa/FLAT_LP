@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href={`${process.env.NODE_ENV === 'production' ? '/FLAT_LP' : ''}/styles.css`} />
       </head>
       <body className={`${notoSansJP.variable} antialiased font-sans`}>
         <Header />
