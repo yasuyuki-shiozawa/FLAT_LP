@@ -1,0 +1,150 @@
+/* Custom styles for the Labor Survey LP */
+
+/* Primary colors */
+.bg-primary { background-color: #7FB3D3; }
+.bg-primary-dark { background-color: #6A9BC3; }
+.bg-primary-light { background-color: #A0C4E1; }
+.text-primary { color: #7FB3D3; }
+.text-primary-dark { color: #6A9BC3; }
+.text-primary-light { color: #A0C4E1; }
+.border-primary { border-color: #7FB3D3; }
+
+/* Accent colors */
+.bg-accent { background-color: #FFB366; }
+.bg-accent-dark { background-color: #E6A055; }
+.bg-accent-light { background-color: #FFC88A; }
+.text-accent { color: #FFB366; }
+.text-accent-dark { color: #E6A055; }
+.text-accent-light { color: #FFC88A; }
+
+/* Text colors */
+.text-text-dark { color: #2C3E50; }
+.text-text-gray { color: #6B7280; }
+.text-text-light { color: #9CA3AF; }
+
+/* Background colors */
+.bg-background { background-color: #FFFFFF; }
+.bg-background-light { background-color: #F8F9FA; }
+.bg-background-gray { background-color: #E5E7EB; }
+
+/* Success and Error */
+.bg-success { background-color: #27AE60; }
+.text-success { color: #27AE60; }
+.bg-error { background-color: #E74C3C; }
+.text-error { color: #E74C3C; }
+
+/* Border */
+.border-border { border-color: #E0E0E0; }
+
+/* Gradients */
+.bg-gradient-primary {
+  background: linear-gradient(to right, #7FB3D3, #A0C4E1);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #7FB3D3 0%, #A0C4E1 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(to right, #FFB366, #FFC88A);
+}
+
+/* Hover states */
+.hover\:bg-primary-dark:hover { background-color: #6A9BC3; }
+.hover\:bg-accent-dark:hover { background-color: #E6A055; }
+
+/* Animations */
+@keyframes count {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-count { animation: count 2s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.6s ease-out forwards; }
+.animate-bounce-arrow { animation: bounceArrow 2s infinite; }
+
+/* Custom components */
+.cta-button {
+  background-color: #FFB366;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #E6A055;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Hero pattern background */
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237FB3D3' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Responsive text utilities */
+@media (max-width: 768px) {
+  .text-h1 { font-size: 1.5rem; }
+  .text-h2 { font-size: 1.25rem; }
+  .text-h3 { font-size: 1.125rem; }
+  .text-body { font-size: 1rem; }
+  .text-caption { font-size: 0.875rem; }
+}
