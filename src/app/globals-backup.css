@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+@layer base {
+  * {
+    border-color: #E0E0E0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-800;
+    font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  /* ヘッダー用のグラデーション背景 */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light;
+  }
+  
+  /* CTAボタンのスタイル */
+  .cta-button {
+    @apply bg-accent hover:bg-accent-dark text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  
+  /* カードのスタイル */
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  /* セクションの共通パディング */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24 px-4 md:px-6 lg:px-8;
+  }
+  
+  /* コンテナの最大幅 */
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  /* テキストグラデーション */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+  
+  /* モバイル用フォントサイズ調整 */
+  @media (max-width: 768px) {
+    .text-h1 { @apply text-2xl; }
+    .text-h2 { @apply text-xl; }
+    .text-h3 { @apply text-lg; }
+    .text-body { @apply text-base; }
+    .text-caption { @apply text-sm; }
+  }
+}
